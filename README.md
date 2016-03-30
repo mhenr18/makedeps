@@ -31,7 +31,7 @@ in your Makefile. An actual Makefile example is as follows:
     BROWSERIFY = node_modules/.bin/browserify
     BFLAGS = -t [ babelify --presets [ es2015 react ] ]
 
-    all: $(ENTRIES)
+    all: $(addprefix build/dist/,$(ENTRIES))
 
     # browserify can't generate deps and output files at the same time, so we have to
     # do two separate bundles (one to actually bundle and one to get deps)
