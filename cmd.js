@@ -6,12 +6,16 @@ var rl = readline.createInterface({
   terminal: false
 });
 
-// write header
-console.log(process.argv[2].replace('$', '$$') + ': \\');
+// all file paths have a $ replaced with $$ to play nicely with makefiles.
+// we have to replace with $$$$ becasue the $ char is a wilecard in String.replace
+// and so two $$ = one actual $
 
-// read lines from stdin and write to stdout, and make sure $'s are escaped
+// write header
+console.log(process.argv[2].replace('$', '$$$$') + ': \\');
+
+// read lines from stdin and write to stdout
 rl.on('line', function(line){
-    console.log('  ' + line.replace('$', '$$') + ' \\');
+    console.log('  ' + line.replace('$', '$$$$') + ' \\');
 });
 
 rl.on('end', function () {
