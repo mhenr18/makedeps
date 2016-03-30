@@ -1,6 +1,6 @@
 {
   "name": "makedeps",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Emits Make-compatible dependency files from browserify --list",
   "main": "cmd.js",
   "author": "Matthew Henry",
