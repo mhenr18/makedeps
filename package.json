@@ -1,7 +1,7 @@
 {
   "name": "makedeps",
-  "version": "0.1.1",
-  "description": "Emits Make-compatible dependency files from broswerify --list",
+  "version": "0.1.2",
+  "description": "Emits Make-compatible dependency files from browserify --list",
   "main": "cmd.js",
   "author": "Matthew Henry",
   "license": "ISC"
