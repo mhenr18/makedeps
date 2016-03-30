@@ -7,11 +7,11 @@ var rl = readline.createInterface({
 });
 
 // write header
-console.log(process.argv[2] + ': \\');
+console.log(process.argv[2].replace('$', '$$') + ': \\');
 
-// read lines from stdin and write to stdout
+// read lines from stdin and write to stdout, and make sure $'s are escaped
 rl.on('line', function(line){
-    console.log('  ' + line + ' \\');
+    console.log('  ' + line.replace('$', '$$') + ' \\');
 });
 
 rl.on('end', function () {
